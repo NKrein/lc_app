@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from productdb.views import formulario_consulta, consultar
+from productdb.views import formulario_consulta, consultar, index
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("form_consulta/", formulario_consulta),
     path("contactar/", consultar),
+    path("index/", index),
+    path("", index),
 ]
